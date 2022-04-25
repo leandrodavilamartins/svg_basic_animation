@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="animation"></div>
+
+    <svg id="my_svg" height="210" width="500">
+        <polygon id="triangle" style="fill:lime;stroke:blue;stroke-width:1"/>
+    </svg>
+
+    <script>
+        let el = document.querySelector("#triangle");
+        console.log(el);
+
+        let i = 0;
+
+            setInterval(() => {
+                i+=1;
+                el.setAttribute("points",`${i},10 250,210 160,210`)
+                console.log(i);
+            }, 10 ) 
+
+    </script>
+
+</body>
+</html>
